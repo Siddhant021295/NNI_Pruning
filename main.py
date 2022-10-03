@@ -36,6 +36,8 @@ import torchvision.transforms as transforms
 import torchvision.datasets as datasets
 import torchvision.models as models
 from torch.utils.data import Subset
+from nni.compression.pytorch.pruning import L1NormPruner,FPGMPruner
+from nni.compression.pytorch.speedup import ModelSpeedup
 
 from util import *
 from model import *
@@ -281,8 +283,7 @@ main(args)
 model = models.__dict__[args.arch](pretrained=True)
 model.cuda()
 
-from nni.compression.pytorch.pruning import L1NormPruner,FPGMPruner
-from nni.compression.pytorch.speedup import ModelSpeedup
+
 
 def model_pruning(model, pruner_method, config, checkpoint):
   pruner = pruner_method(model, config)
