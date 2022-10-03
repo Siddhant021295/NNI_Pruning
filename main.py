@@ -7,7 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/1UzHCl7Vd8eQYRK1WYp_SFZJjIT5D9EmZ
 """
 
-!pip install nni
 
 import sys
 sys.path.append('/content/')
@@ -250,7 +249,7 @@ def main(args):
         main_worker(args.gpu, ngpus_per_node, args)
 
 class Config:
-  data = 'imagenet'
+  data = './../mnt/beegfs/sgupta45/ILSVRC/Data/CLS-LOC/'
   arch = 'vgg16'
   workers = 4
   epochs = 2
