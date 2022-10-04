@@ -14,7 +14,7 @@
 - The result are as follows :
   - Orignal Model:
     
-    ![Screen Shot 2022-10-04 at 3 34 26 PM](https://user-images.githubusercontent.com/22122136/193909614-61e058ba-85cf-4fd7-a3f3-864027afb687.png)
+    ![Screen Shot 2022-10-04 at 3 46 52 PM](https://user-images.githubusercontent.com/22122136/193911940-b9c9ba69-b530-4175-bf3e-e3f37b337e00.png)
   - Pruning with N1NormPruner:
     
     ![Screen Shot 2022-10-04 at 12 40 06 PM](https://user-images.githubusercontent.com/22122136/193909846-d34a5ffc-4eeb-4995-bf65-21b5eb168bf5.png)
