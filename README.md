@@ -28,4 +28,9 @@
     
     ![Screen Shot 2022-10-04 at 12 44 18 PM](https://user-images.githubusercontent.com/22122136/193910047-1037949f-bb2d-402a-a2c9-344b3b5e80c0.png)
 
-As we can see the result of the Pruned model is on par with the Original model and at the same time require less computaion
+
+- Project Learnings
+  - As we can see that the accuracy of the model post pruning is at par or in some cases higher than the accuracy of the original model on the validation dataset.
+  - Another important factor to be considered while pruning is the training time for the model. The training time incurred for training of the pruned model in all pruner-configuration combinations is significantly lesser than the training time required for the original model. In the cases where the sparsity ratio is lower i.e. configuration 2, the training time is even lesser than than the training time taken for pruned models with configuration 1 since we obtain a more compact model after pruning.
+  - The sparsity ratios defined in the configuration list for each pruning method also have a significant effect on the pruning process. In configuration 1, the sparsity ratio is set to 0.5 which forces the pruning process to narrow down the models layers to 1/2 of their original size significantly reducing training time and model carbon footprint. As shown in the results, the model pruning with a 0.75 ratio does not have a significant decrease in accuracy from the accuracy of the 0.5 sparsity ratio pruned model, but provides a more compact model with faster training time and thus can be considered more optimal.
+  - In terms of the pruner methods, both the methods follow a different mathematical approach to deciding the weight blocks that need to be pruned. In our particular example, with the mnist dataset, the approach followed by the FPGM pruner shows to be more effective as it helps achieve an accuracy of more than 99% in the configuration 1 settings.
