@@ -7,8 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/1ardkOv22opNqbYIO7tDnW16nHhsx7cSv
 """
 
-!pip install nni
-
 from __future__ import print_function
 import argparse
 import torch
@@ -257,6 +255,4 @@ start_time = time.time()
 main(args)
 end_time = time.time()
 print('Time to train the fpgm_pruner_config_2 Model',end_time - start_time)
-
-!nvidia-smi
 
