@@ -66,7 +66,7 @@ def main_worker(gpu, ngpus_per_node, args):
         print("=> using pre-trained model '{}'".format(args.arch))
         model = models.__dict__[args.arch](pretrained=True)
     elif args.pruned :
-        model = torch.load('pruned_checkpoint.pth')
+        model = torch.load('l1_pruner_config_1.pth')
         print(model)
     else:
         print("=> creating model '{}'".format(args.arch))
@@ -249,7 +249,7 @@ def main(args):
         main_worker(args.gpu, ngpus_per_node, args)
 
 class Config:
-  data = './../mnt/beegfs/sgupta45/ILSVRC/Data/CLS-LOC/'
+  data = '/mnt/beegfs/sgupta45/ILSVRC/Data/CLS-LOC/'
   arch = 'vgg16'
   workers = 4
   epochs = 2
